@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="todos.css">
+    </head>
+    <body>
+        
+        <div class="flex center" style="
+            height: 90%;
+            align-items: flex-start;
+            margin-top: 5%;
+            ">
+            <div id='modalBox' class="flex center height-width100 bg-color-gray-op" style="
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            display: none;
+            ">
+                <!-- modal here -->
+                <div  class="flex center bg-color-white shadow" style="
+                width: 500px;
+                height: 250px;
+
+                flex-direction: column;
+                justify-content: space-between;
+                ">
+                    <!-- create todos here -->
+                    <div style="
+                    width: 100%;
+                    position: relative;
+                    top: 0;
+                    ">
+                        <form id="createTodoForm" class="flex margin0" style="
+                        padding:10.6px 26.6px;
+                        ">
+                            <input type="text" id="todoTitle" name="todoTitleInput" value="Title" class="input-style">
+                            
+                        </form>
+                        <textarea id="todoTxtInput" form="createTodoForm" maxlength="140" class="input-style" style="
+                        margin: 10.6px 26.6px;
+                        min-width: 89.5%;
+                        max-width: 89.5%;
+                        min-height: 138px;
+                        max-height: 138px;
+                        resize: none;
+                        border-radius: 30px / 25%;
+                        padding: 8px 24px;
+                        "></textarea>
+                    </div>
+                    <div>
+                        <div id="createTaskBtn" class="flex center color-white shadow" style="
+                        padding:10.6px 26.6px;
+                        background-color: rgb(175, 126, 235);
+                        border-radius: 20px / 50%;
+
+                        position: relative;
+                        top: 21.2px;
+                        ">
+                            <h3 class="margin0">Create task</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="top-left">
+                <h1 id="username-txt" class=" margin0"><!-- username here --></h1>
+            </div>
+
+            <div id='todoBox' class="flex center bg-color-white shadow" style="
+            width: 70%;
+            min-height: 30%;
+            
+            flex-direction: column;
+            justify-content: space-between;
+            ">
+                <!-- todo list here -->
+                <div id="todoList" style="
+                width: 100%;
+                /* background-color: red; */
+                padding-top: 35px;
+                ">
+                    
+                    <!-- <div id="todoItem" class="flex" style="
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 60px 0px 60px;
+                    ">
+
+                        <div id="todoCheckBox" name="todoCheckBox" style="
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                        border-style: solid;
+                        border-color: gray;
+                        border-width: 3px;
+                        border-radius: 50%;
+                    
+                        ">
+                        </div>
+                        <div id="todoNameTimeText" name="todoNameTimeText" style="
+                        width: 80%;
+                        flex-direction: column;
+                        ">
+                            <div id="todoNameTime" class="flex" style="
+                            width: 100%;
+                            justify-content: space-between;
+                            ">
+                                <div id="todoName" name="todoName">
+                                    <h3>This is a title</h3>
+                                </div>
+                                <div id="todoTime" name="todoTime">
+                                    <h3 >5/7/2021 11:47</h3>
+
+                                </div>
+                                
+                            </div>
+
+                            <div id="todoText" name="todoText" style="
+                            padding: 1.33em 0;
+                            ">
+                                <h4 class="margin0">this is a text</h4>
+
+                            </div>
+                        </div>
+                        
+
+                        <div id="deleteTodo" name="deleteTodo" style="
+                        width: 100px;
+                        height: 100px;
+                        background-color: blue;
+                        visibility: hidden;
+                        ">
+                        </div>
+
+                    </div> -->
+                </div>
+
+                <div>
+                    <div id="newTaskBtn" class="flex center color-white shadow" style="
+                    padding:10.6px 26.6px;
+                    background-color: rgb(175, 126, 235);
+                    border-radius: 20px / 50%;
+
+                    position: relative;
+                    top: 21.2px;
+                    ">
+                        <h3 class="margin0">+ New task</h3>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div id="logoutBtn" class="bottom-right bg-color-white flex center radius" style="
+            padding: 0.5% 0.8%;
+            ">
+                <!-- log out button here
+                align it to the bottom right
+                 -->
+                 <h2 class="margin0 ">Log out</h2>
+            </div>
+
+        </div>
+    </body>
+    <script src="./js/todos.js"></script>
+</html>

@@ -1,0 +1,64 @@
+body {
+  margin: 0%;
+  background-image: linear-gradient(rgb(46, 190, 243), rgb(21, 91, 150));
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+form {
+  margin: 0%;
+}
+
+input:focus {
+  outline: transparent;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.height20 {
+  height: 28%;
+}
+
+.margin5 {
+  margin: 0% 0% 5% 0%;
+}
+
+.width {
+  width: 20%;
+}
+
+.radius {
+  border-radius: 3px / 7%;
+}
+
+.bg-color-white {
+  background-color: white;
+}
+
+.bg-color-orange {
+  background-color: rgb(240, 142, 51);
+}
+
+.login-form {
+  height: 100%;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: transparent;
+  font-size: 20;
+  text-align: center;
+  color: gray;
+}

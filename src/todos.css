@@ -1,0 +1,77 @@
+body {
+  margin: 0%;
+  background-color: rgb(227, 233, 255);
+  color: gray;
+}
+
+input:focus {
+  outline: transparent;
+}
+
+textarea:focus {
+  outline: transparent;
+}
+
+.bg-color-white {
+  background-color: white;
+}
+
+.bg-color-gray-op {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.margin0 {
+  margin: 0%;
+}
+
+.height-width100 {
+  height: 100%;
+  width: 100%;
+}
+
+.color-gray {
+  color: gray;
+}
+
+.color-white {
+  color: white;
+}
+
+.shadow {
+  box-shadow: 0px 0px 25px -15px #888888;
+}
+
+.radius {
+  border-radius: 3px / 7%;
+}
+
+.input-style {
+  border-radius: 14px / 50%;
+  border-width: 3px;
+  border-color: gray;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  padding: 2px 11px;
+}
+
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
