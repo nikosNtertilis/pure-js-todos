@@ -2,10 +2,21 @@ body {
   margin: 0%;
   background-color: rgb(227, 233, 255);
   color: gray;
+
+  font-family: Helvetica;
+}
+
+input {
+  font-family: Helvetica;
 }
 
 input:focus {
   outline: transparent;
+}
+
+textarea {
+  font-family: Helvetica;
+  resize: none;
 }
 
 textarea:focus {
@@ -16,12 +27,20 @@ textarea:focus {
   background-color: white;
 }
 
+.bg-color-purple {
+  background-color: rgb(175, 126, 235);
+}
+
 .bg-color-gray-op {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .flex {
   display: flex;
+}
+
+.fd-column {
+  flex-direction: column;
 }
 
 .center {

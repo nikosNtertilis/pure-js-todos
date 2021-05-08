@@ -17,11 +17,10 @@
             display: none;
             ">
                 <!-- modal here -->
-                <div  class="flex center bg-color-white shadow" style="
+                <div  class="flex fd-column center bg-color-white shadow" style="
                 width: 500px;
                 height: 250px;
 
-                flex-direction: column;
                 justify-content: space-between;
                 ">
                     <!-- create todos here -->
@@ -38,19 +37,15 @@
                         </form>
                         <textarea id="todoTxtInput" form="createTodoForm" maxlength="140" class="input-style" style="
                         margin: 10.6px 26.6px;
-                        min-width: 89.5%;
-                        max-width: 89.5%;
-                        min-height: 138px;
-                        max-height: 138px;
-                        resize: none;
+                        width: 89.5%;
+                        height: 67.5%;
                         border-radius: 30px / 25%;
                         padding: 8px 24px;
                         "></textarea>
                     </div>
                     <div>
-                        <div id="createTaskBtn" class="flex center color-white shadow" style="
+                        <div id="createTaskBtn" class="flex center color-white bg-color-purple shadow" style="
                         padding:10.6px 26.6px;
-                        background-color: rgb(175, 126, 235);
                         border-radius: 20px / 50%;
 
                         position: relative;
@@ -67,20 +62,18 @@
                 <h1 id="username-txt" class=" margin0"><!-- username here --></h1>
             </div>
 
-            <div id='todoBox' class="flex center bg-color-white shadow" style="
+            <div id='todoBox' class="flex fd-column center bg-color-white shadow" style="
             width: 70%;
             min-height: 30%;
             
-            flex-direction: column;
             justify-content: space-between;
             ">
                 <!-- todo list here -->
                 <div id="todoList" style="
                 width: 100%;
-                /* background-color: red; */
                 padding-top: 35px;
                 ">
-                    
+                    <!-- todos here -->
                     <!-- <div id="todoItem" class="flex" style="
                     justify-content: space-between;
                     align-items: center;
@@ -137,9 +130,8 @@
                 </div>
 
                 <div>
-                    <div id="newTaskBtn" class="flex center color-white shadow" style="
+                    <div id="newTaskBtn" class="flex center bg-color-purple color-white shadow" style="
                     padding:10.6px 26.6px;
-                    background-color: rgb(175, 126, 235);
                     border-radius: 20px / 50%;
 
                     position: relative;
@@ -150,14 +142,12 @@
                 </div>
                 
             </div>
-            
+
+            <!-- log out button here -->
             <div id="logoutBtn" class="bottom-right bg-color-white flex center radius" style="
             padding: 0.5% 0.8%;
             ">
-                <!-- log out button here
-                align it to the bottom right
-                 -->
-                 <h2 class="margin0 ">Log out</h2>
+                <h2 class="margin0 ">Log out</h2>
             </div>
 
         </div>
