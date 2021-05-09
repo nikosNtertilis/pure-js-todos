@@ -17,7 +17,8 @@ const todoTxtInput = document.getElementById("todoTxtInput");
 const users = JSON.parse(localStorage.getItem('users'))
 const user = JSON.parse(localStorage.getItem('user'));
 
-let isChecked = user.todos.isChecked;
+// selectors
+Const userTodosIsChecked = user.todos[i].isChecked;
 
 usernameTxt.innerHTML = user.username ;
 
@@ -104,7 +105,7 @@ newTaskBtn.onclick = () => {
 
 
 for( let i=0; i < user.todos.length; i ++ ){
-    if(user.todos[i].isChecked){
+    if(userTodosIsChecked){
 
         todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
 
@@ -119,7 +120,7 @@ for( let i=0; i < user.todos.length; i ++ ){
 for( let i=0; i < todoNameTimeText.length; i ++ ){
     todoNameTimeText[i].onclick = () => {
         const usersUpdated = [...users];
-        if(user.todos[i].isChecked){
+        if(userTodosIsChecked){
     
             todoCheckBox[i].style.background = 'white';
     
@@ -128,7 +129,7 @@ for( let i=0; i < todoNameTimeText.length; i ++ ){
             deleteTodo[i].style.visibility = 'hidden';
 
             usersUpdated[indexOfUser].todos[i].isChecked = !user.todos[i].isChecked ;
-            user.todos[i].isChecked = !user.todos[i].isChecked ;
+            userTodosIsChecked = !userTodosIsChecked ;
             console.log('test 1');
     
             localStorage.setItem('user', JSON.stringify(user));
@@ -142,7 +143,7 @@ for( let i=0; i < todoNameTimeText.length; i ++ ){
             deleteTodo[i].style.visibility = 'visible';
     
             users[indexOfUser].todos[i].isChecked = !user.todos[i].isChecked ;
-            user.todos[i].isChecked = !user.todos[i].isChecked ;
+            userTodosIsChecked = !userTodosIsChecked ;
             
             console.log('test 2');
             localStorage.setItem('user', JSON.stringify(user));
@@ -154,7 +155,7 @@ for( let i=0; i < todoNameTimeText.length; i ++ ){
 
 // todoNameTimeText.map( elem => {
     // elem.onclick = () => {
-    //     if(isChecked){
+    //     if(userTodosIsChecked){
     
     //         todoCheckBox.style.background = "white";
     
