@@ -1,18 +1,25 @@
+
+//elements by id
 const usernameTxt = document.getElementById("username-txt");
 const logoutBtn = document.getElementById("logoutBtn");
 const newTaskBtn = document.getElementById("newTaskBtn");
 const createTaskBtn = document.getElementById("createTaskBtn");
-const todoNameTimeText = document.getElementsByName("todoNameTimeText");
-const todoCheckBox = document.getElementsByName("todoCheckBox");
-const todoText = document.getElementsByName("todoText");
-const todoName = document.getElementsByName("todoName");
-const deleteTodo = document.getElementsByName("deleteTodo");
 const todoList = document.getElementById("todoList");
-
 const modalBox = document.getElementById("modalBox");
-
 const todoTitle = document.getElementById("todoTitle");
 const todoTxtInput = document.getElementById("todoTxtInput");
+
+//elements by name
+const todoNameTimeTextHTMLCollection = document.getElementsByName("todoNameTimeText");
+const todoNameTimeText = [...todoNameTimeTextHTMLCollection];
+const todoCheckBoxHTMLCollection = document.getElementsByName("todoCheckBox");
+const todoCheckBox = [...todoCheckBoxHTMLCollection];
+const todoTextHTMLCollection = document.getElementsByName("todoText");
+const todoText = [...todoTextHTMLCollection];
+const todoNameHTMLCollection = document.getElementsByName("todoName");
+const todoName = [...todoNameHTMLCollection];
+const deleteTodoHTMLCollection = document.getElementsByName("deleteTodo");
+const deleteTodo = [...deleteTodoHTMLCollection];
 
 const users = JSON.parse(localStorage.getItem('users'))
 const user = JSON.parse(localStorage.getItem('user'));
@@ -103,8 +110,7 @@ newTaskBtn.onclick = () => {
 
 }
 
-
-for( let i=0; i < user.todos.length; i ++ ){
+User.todos.forEach(todo => {
     if(userTodosIsChecked){
 
         todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
@@ -115,7 +121,23 @@ for( let i=0; i < user.todos.length; i ++ ){
         deleteTodo[i].style.visibility = 'visible';
         
     }
-}
+}) 
+// for( let i=0; i < user.todos.length; i ++ ){
+//    if(userTodosIsChecked){
+//
+//        todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
+//
+//        todoText[i].style.textDecoration = 'line-through';
+//        todoName[i].style.textDecoration = 'line-through';
+//
+ //       deleteTodo[i].style.visibility = 'visible';
+//        
+ //   }
+//}
+
+todoNameTimeText.forEach(elem => {
+
+}) 
 
 for( let i=0; i < todoNameTimeText.length; i ++ ){
     todoNameTimeText[i].onclick = () => {
