@@ -25,7 +25,7 @@ const users = JSON.parse(localStorage.getItem('users'))
 const user = JSON.parse(localStorage.getItem('user'));
 
 // selectors
-Const userTodosIsChecked = user.todos[i].isChecked;
+const userTodosIsChecked = user.todos[i].isChecked;
 
 usernameTxt.innerHTML = user.username ;
 
