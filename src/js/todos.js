@@ -10,22 +10,32 @@ const todoTitle = document.getElementById("todoTitle");
 const todoTxtInput = document.getElementById("todoTxtInput");
 
 //elements by name
-const todoNameTimeTextHTMLCollection = document.getElementsByName("todoNameTimeText");
-const todoNameTimeText = [...todoNameTimeTextHTMLCollection];
-const todoCheckBoxHTMLCollection = document.getElementsByName("todoCheckBox");
-const todoCheckBox = [...todoCheckBoxHTMLCollection];
-const todoTextHTMLCollection = document.getElementsByName("todoText");
-const todoText = [...todoTextHTMLCollection];
-const todoNameHTMLCollection = document.getElementsByName("todoName");
-const todoName = [...todoNameHTMLCollection];
-const deleteTodoHTMLCollection = document.getElementsByName("deleteTodo");
-const deleteTodo = [...deleteTodoHTMLCollection];
+const todoNameTimeText = document.getElementsByName("todoNameTimeText");
+const todoCheckBox = document.getElementsByName("todoCheckBox");
+const todoText = document.getElementsByName("todoText");
+const todoName = document.getElementsByName("todoName");
+const deleteTodo = document.getElementsByName("deleteTodo");
+// const todoItem = document.getElementsByName("todoItem");
+
+
+// const todoNameTimeTextHTMLCollection = document.getElementsByName("todoNameTimeText");
+// const todoNameTimeText = [...todoNameTimeTextHTMLCollection];
+// const todoCheckBoxHTMLCollection = document.getElementsByName("todoCheckBox");
+// const todoCheckBox = [...todoCheckBoxHTMLCollection];
+// const todoTextHTMLCollection = document.getElementsByName("todoText");
+// const todoText = [...todoTextHTMLCollection];
+// const todoNameHTMLCollection = document.getElementsByName("todoName");
+// const todoName = [...todoNameHTMLCollection];
+// const deleteTodoHTMLCollection = document.getElementsByName("deleteTodo");
+// const deleteTodo = [...deleteTodoHTMLCollection];
+const todoItemHTMLCollection = document.getElementsByName("todoItem");
+// const todoItem = [...todoItemHTMLCollection];
 
 const users = JSON.parse(localStorage.getItem('users'))
 const user = JSON.parse(localStorage.getItem('user'));
 
 // selectors
-const userTodosIsChecked = user.todos[i].isChecked;
+// const userTodosIsChecked = user.todos[i].isChecked;
 
 usernameTxt.innerHTML = user.username ;
 
@@ -40,7 +50,7 @@ if(!user.todos.length){
 
 user.todos.map( elem => {
 
-    const todoTemplate = `<div id="todoItem" class="flex" style="
+    const todoTemplate = `<div id="todoItem" name="todoItem" class="flex" style="
 justify-content: space-between;
 align-items: center;
 padding: 0px 60px 0px 60px;
@@ -110,8 +120,10 @@ newTaskBtn.onclick = () => {
 
 }
 
-User.todos.forEach(todo => {
-    if(userTodosIsChecked){
+const todoItem = [...todoItemHTMLCollection];
+todoItem.forEach((currentValue, i, listObj) => {
+
+    if(user.todos[i].isChecked){
 
         todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
 
@@ -121,28 +133,26 @@ User.todos.forEach(todo => {
         deleteTodo[i].style.visibility = 'visible';
         
     }
-}) 
-// for( let i=0; i < user.todos.length; i ++ ){
-//    if(userTodosIsChecked){
-//
-//        todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
-//
-//        todoText[i].style.textDecoration = 'line-through';
-//        todoName[i].style.textDecoration = 'line-through';
-//
- //       deleteTodo[i].style.visibility = 'visible';
-//        
- //   }
-//}
-
-todoNameTimeText.forEach(elem => {
 
 }) 
+
+for( let i=0; i < user.todos.length; i ++ ){
+   if(user.todos[i].isChecked){
+
+       todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
+
+       todoText[i].style.textDecoration = 'line-through';
+       todoName[i].style.textDecoration = 'line-through';
+
+       deleteTodo[i].style.visibility = 'visible';
+       
+   }
+}
 
 for( let i=0; i < todoNameTimeText.length; i ++ ){
     todoNameTimeText[i].onclick = () => {
         const usersUpdated = [...users];
-        if(userTodosIsChecked){
+        if(user.todos[i].isChecked){
     
             todoCheckBox[i].style.background = 'white';
     
@@ -151,8 +161,7 @@ for( let i=0; i < todoNameTimeText.length; i ++ ){
             deleteTodo[i].style.visibility = 'hidden';
 
             usersUpdated[indexOfUser].todos[i].isChecked = !user.todos[i].isChecked ;
-            userTodosIsChecked = !userTodosIsChecked ;
-            console.log('test 1');
+            user.todos[i].isChecked = !user.todos[i].isChecked ;
     
             localStorage.setItem('user', JSON.stringify(user));
             localStorage.setItem('users', JSON.stringify(usersUpdated));
@@ -165,9 +174,8 @@ for( let i=0; i < todoNameTimeText.length; i ++ ){
             deleteTodo[i].style.visibility = 'visible';
     
             users[indexOfUser].todos[i].isChecked = !user.todos[i].isChecked ;
-            userTodosIsChecked = !userTodosIsChecked ;
+            user.todos[i].isChecked = !user.todos[i].isChecked ;
             
-            console.log('test 2');
             localStorage.setItem('user', JSON.stringify(user));
             localStorage.setItem('users', JSON.stringify(users));
         }
@@ -177,7 +185,7 @@ for( let i=0; i < todoNameTimeText.length; i ++ ){
 
 // todoNameTimeText.map( elem => {
     // elem.onclick = () => {
-    //     if(userTodosIsChecked){
+    //     if(user.todos[i].isChecked){
     
     //         todoCheckBox.style.background = "white";
     
