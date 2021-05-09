@@ -199,8 +199,7 @@ createTaskBtn.onclick = () => {
     
     if(todoTitle.value != "Title"){
 
-        var today = new Date();
-        var currentTime = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate()+' '+today.getHours()+ ":" + today.getMinutes();
+        const currentTime = new Date().getFullYear() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getDate() + ' ' + new Date().getHours() + ":" + new Date().getMinutes();
 
         user.todos.push({
             title: todoTitle.value ,
