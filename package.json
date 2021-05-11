@@ -1,0 +1,23 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "description": "Replace command for with forEach",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html src/todos.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikosNtertilis/pure-js-todos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikosNtertilis/pure-js-todos/issues"
+  },
+  "homepage": "https://github.com/nikosNtertilis/pure-js-todos#readme",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}
