@@ -5,53 +5,21 @@
     </head>
     <body>
         
-        <div class="flex center" style="
-            height: 90%;
-            align-items: flex-start;
-            margin-top: 5%;
-            ">
-            <div id='modalBox' class="flex center height-width100 bg-color-gray-op" style="
-            position: absolute;
-            top: 0;
-            z-index: 10;
-            display: none;
-            ">
-                <!-- modal here -->
-                <div  class="flex fd-column center bg-color-white shadow" style="
-                width: 500px;
-                height: 250px;
+        <div id="parent-div" class="flex flex-start-center">
 
-                justify-content: space-between;
-                ">
+            <div id='modalBox' class="flex center position-absolute top0 height-width100 bg-color-gray-op">
+                <!-- modal here -->
+                <div id="inputBox" class="flex fd-column center jc-space-between bg-color-white shadow">
                     <!-- create todos here -->
-                    <div style="
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    top: 0;
-                    ">
-                        <form id="createTodoForm" class="flex margin0" style="
-                        padding:10.6px 26.6px;
-                        ">
+                    <div class="position-relative top0 height-width100">
+                        <form id="createTodoForm" class="flex margin0">
                             <input type="text" id="todoTitle" name="todoTitleInput" value="Title" class="input-style">
                             
                         </form>
-                        <textarea id="todoTxtInput" form="createTodoForm" maxlength="140" class="input-style" style="
-                        margin: 10.6px 26.6px;
-                        width: 89.5%;
-                        height: 67.5%;
-                        border-radius: 30px / 25%;
-                        padding: 8px 24px;
-                        "></textarea>
+                        <textarea id="todoTxtInput" form="createTodoForm" maxlength="140" class="input-style"></textarea>
                     </div>
                     <div>
-                        <div id="createTaskBtn" class="flex center color-white bg-color-purple shadow" style="
-                        padding:10.6px 26.6px;
-                        border-radius: 20px / 50%;
-
-                        position: relative;
-                        top: 21.2px;
-                        ">
+                        <div id="createTaskBtn" class="flex position-relative center color-white bg-color-purple shadow">
                             <h3 class="margin0">Create task</h3>
                         </div>
                     </div>
@@ -63,21 +31,12 @@
                 <h1 id="username-txt" class=" margin0"><!-- username here --></h1>
             </div>
 
-            <div id='todoBox' class="flex fd-column center bg-color-white shadow" style="
-            width: 70%;
-            min-height: 30%;
-            
-            justify-content: space-between;
-            ">
+            <div id='todoBox' class="flex fd-column center jc-space-between bg-color-white shadow">
                 <!-- todo list here -->
-                <div id="todoList" style="
-                width: 100%;
-                padding-top: 35px;
-                ">
+                <div id="todoList">
                     <!-- todos here -->
                     
-                    <!-- <div id="todoItem" class="flex" style="
-                    justify-content: space-between;
+                    <!-- <div id="todoItem" class="flex jc-space-between" style="
                     align-items: center;
                     padding: 0px 60px 0px 60px;
                     ">
@@ -97,9 +56,8 @@
                         width: 80%;
                         flex-direction: column;
                         ">
-                            <div id="todoNameTime" class="flex" style="
+                            <div id="todoNameTime" class="flex jc-space-between" style="
                             width: 100%;
-                            justify-content: space-between;
                             ">
                                 <div id="todoName" name="todoName">
                                     <h3>This is a title</h3>
@@ -132,13 +90,7 @@
                 </div>
 
                 <div>
-                    <div id="newTaskBtn" class="flex center bg-color-purple color-white shadow" style="
-                    padding:10.6px 26.6px;
-                    border-radius: 20px / 50%;
-
-                    position: relative;
-                    top: 21.2px;
-                    ">
+                    <div id="newTaskBtn" class="flex position-relative center bg-color-purple color-white shadow">
                         <h3 class="margin0">+ New task</h3>
                     </div>
                 </div>
@@ -146,9 +98,7 @@
             </div>
 
             <!-- log out button here -->
-            <div id="logoutBtn" class="bottom-right bg-color-white flex center radius" style="
-            padding: 0.5% 0.8%;
-            ">
+            <div id="logoutBtn" class="bottom-right bg-color-white flex center radius">
                 <h2 class="margin0 ">Log out</h2>
             </div>
 

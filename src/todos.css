@@ -23,6 +23,55 @@ textarea:focus {
   outline: transparent;
 }
 
+#logoutBtn {
+  padding: 0.5% 0.8%;
+}
+
+#createTodoForm,
+#createTaskBtn,
+#newTaskBtn {
+  padding: 10.6px 26.6px;
+  border-radius: 20px / 50%;
+}
+
+#createTaskBtn,
+#newTaskBtn {
+  top: 21.2px;
+}
+
+#todoList {
+  padding-top: 35px;
+  width: 100%;
+}
+
+#todoBox {
+  width: 70%;
+  min-height: 30%;
+}
+
+#todoTxtInput {
+  margin: 10.6px 26.6px;
+  width: 89.5%;
+  height: 67.5%;
+  border-radius: 30px / 25%;
+  padding: 8px 24px;
+}
+
+#modalBox {
+  z-index: 10;
+  display: none;
+}
+
+#parent-div {
+  height: 90%;
+  margin-top: 5%;
+}
+
+#inputBox {
+  width: 500px;
+  height: 250px;
+}
+
 .bg-color-white {
   background-color: white;
 }
@@ -37,6 +86,14 @@ textarea:focus {
 
 .flex {
   display: flex;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
 }
 
 .fd-column {
@@ -56,8 +113,17 @@ textarea:focus {
   justify-content: center;
 }
 
+.flex-start-center {
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .margin0 {
   margin: 0%;
+}
+
+.top0 {
+  top: 0;
 }
 
 .height-width100 {
