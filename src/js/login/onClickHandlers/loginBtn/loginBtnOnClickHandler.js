@@ -18,18 +18,13 @@ const loginBtnOnClickHandler = () => {
         const userAcc = authenticate(users, user);
         
         if(!!userAcc){
-            //login sucs
             navigateTodoPage(user)
         }else {
             if(!findUsername(users, user.username)){
-                users.push( user );
-                localStorage.setItem('users', JSON.stringify(users))
-                //login sucs
-                navigateTodoPage(user)
-            }else{
-                console.log('wrong password');
-                PasswordInput.value = 'wrong password';
-            } 
+                window.alert('you sould sign up')
+            }else {
+                window.alert('wrong password');
+            }
         }  
     }
 }

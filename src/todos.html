@@ -31,62 +31,34 @@
                 <h1 id="username-txt" class=" margin0"><!-- username here --></h1>
             </div>
 
-            <div id='todoBox' class="flex fd-column center jc-space-between bg-color-white shadow">
+            <div id='todoBox' class="flex fd-column align-items-center jc-space-between bg-color-white shadow">
                 <!-- todo list here -->
                 <div id="todoList">
                     <!-- todos here -->
                     
-                    <!-- <div id="todoItem" class="flex jc-space-between" style="
-                    align-items: center;
-                    padding: 0px 60px 0px 60px;
-                    ">
+                    <!-- <div id="${elem.title + index}" name="todoItem" class="flex jc-space-between align-items-center padding5">
 
-                        <div id="todoCheckBox" name="todoCheckBox" style="
-                        width: 10px;
-                        height: 10px;
-                        background-color: white;
-                        border-style: solid;
-                        border-color: gray;
-                        border-width: 3px;
-                        border-radius: 50%;
-                    
-                        ">
-                        </div>
-                        <div id="todoNameTimeText" name="todoNameTimeText" style="
-                        width: 80%;
-                        flex-direction: column;
-                        ">
-                            <div id="todoNameTime" class="flex jc-space-between" style="
-                            width: 100%;
-                            ">
+                        <div id="todoCheckBox" name="todoCheckBox" class="todo-check-box"></div>
+                        <div id="todoNameTimeText" name="todoNameTimeText" class="fd-column">
+                            <div id="todoNameTime" class="flex jc-space-between">
                                 <div id="todoName" name="todoName">
-                                    <h3>This is a title</h3>
+                                    <h3>${elem.title}</h3>
                                 </div>
                                 <div id="todoTime" name="todoTime">
-                                    <h3 >5/7/2021 11:47</h3>
-
-                                </div>
-                                
+                                    <h3 >${elem.time}</h3>
+                                </div> 
                             </div>
-
-                            <div id="todoText" name="todoText" style="
-                            padding: 1.33em 0;
-                            ">
-                                <h4 class="margin0">this is a text</h4>
-
+                            <div id="todoText" name="todoText">
+                                <h4 class="margin0">${elem.text}</h4>
                             </div>
                         </div>
-                        
-
-                        <div id="deleteTodo" name="deleteTodo" style="
-                        width: 100px;
-                        height: 100px;
-                        background-color: blue;
-                        visibility: hidden;
-                        ">
+                        <div id="deleteTodo" name="deleteTodo" class="flex center">
+                            <div id="trash-can" name="trashCan">
+                                <img id="trash-can-img" src="./images/trashCan.jpg" alt="trash can">
+                            </div>       
                         </div>
-
                     </div> -->
+
                 </div>
 
                 <div>

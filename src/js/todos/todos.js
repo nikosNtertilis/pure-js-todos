@@ -1,4 +1,4 @@
-import {completeTask, createTaskBtnOnClickHandler, deleteTaskBtnOnClickHandler, newTaskBtnOnClickHandler} from './onClickHandlers'
+import {completeTask, createTaskBtnOnClickHandler, deleteTaskBtnOnClickHandler, modalBackdrop, newTaskBtnOnClickHandler} from './onClickHandlers'
 import {todoTemplate} from './todoTemplate'
 
 const usernameTxt = document.getElementById("username-txt");
@@ -6,6 +6,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 const newTaskBtn = document.getElementById("newTaskBtn");
 const createTaskBtn = document.getElementById("createTaskBtn");
 const todoList = document.getElementById("todoList");
+const modalBox = document.getElementById("modalBox");
 
 const todoItem = document.getElementsByName("todoItem");
 
@@ -35,12 +36,14 @@ newTaskBtn.onclick = newTaskBtnOnClickHandler;
 
 createTaskBtn.onclick = () => createTaskBtnOnClickHandler(user, users);
 
+modalBox.onclick = modalBackdrop;
+
 todoItem.forEach((currentValue, i, listObj) => {
 
-    console.log(currentValue.children);
+    console.log(currentValue.children.deleteTodo.children);
 
     currentValue.children.todoNameTimeText.onclick =() => completeTask(i, user, users);
-    currentValue.children.deleteTodo.onclick = () => deleteTaskBtnOnClickHandler(i, user, users);
+    currentValue.children.deleteTodo.children.trashCan.onclick = () => deleteTaskBtnOnClickHandler(i, user, users);
 
     if(user.todos[i].isChecked){
 

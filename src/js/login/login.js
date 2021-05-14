@@ -1,9 +1,12 @@
 import {initLocalStorage} from './initLocalStorage'
-import {loginBtnOnClickHandler} from './onClickHandlers'
+import {createAccBtnOnClickHandler, loginBtnOnClickHandler, modalBackdrop, signUpBtnOnClickHandler} from './onClickHandlers'
 
 const usernameInput = document.getElementById("username");
 const PasswordInput = document.getElementById("password");
 const loginBtn = document.getElementById("loginBtn");
+const signUpBtn = document.getElementById("signUpBtn");
+const createAccBtn = document.getElementById("createAccBtn");
+const modalBox = document.getElementById("modalBox");
 
 initLocalStorage();
 
@@ -18,5 +21,11 @@ PasswordInput.onclick = () => {
 };
 
 loginBtn.onclick = loginBtnOnClickHandler;
+
+signUpBtn.onclick = signUpBtnOnClickHandler;
+
+createAccBtn.onclick = createAccBtnOnClickHandler;
+
+modalBox.onclick = modalBackdrop;
 
 

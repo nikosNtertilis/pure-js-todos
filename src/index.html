@@ -5,29 +5,47 @@
     </head>
     <body>
         <div class='flex center login-form'>
-            <h1 style="margin: 2% 0% 2% 0%;">Member login</h1>
-            <div style="width: 100%; height: 17%;" class="flex center">
-                <form style="
-                    width: 33%; 
-                    height: 100%; 
-                    flex-direction: column; 
-                    justify-content: space-between;
-                    " 
-                    class="flex">
+            <h1 class="member-login">Member login</h1>
+            <div class="flex center form-div fd-column">
+                <form class="flex form">
                     <div class='username  height20 radius bg-color-white'>
                         <input class='input radius flex center' type="text" id="username" name="usernameInput" value="Username">
                         
                     </div>
 
-                    <div class='password  height20 radius bg-color-white'>
+                    <div class='height20 radius bg-color-white'>
                         <input class='input radius flex center' type="password" id="password" name="passwordInput" value="Password">
                     </div>
 
-                    <div id="loginBtn" class='password flex center  height20 radius bg-color-orange'>
-                        <h2  style="margin: 0%;" class="">Login</h2>
+                    <div id="loginBtn" class='flex center  height20 radius bg-color-orange'>
+                        <h2 class="margin0">Login</h2>
                         <!-- <input type="submit" value="Submit"> -->
                     </div>
                   </form>
+                  <h4 id="signUpBtn">sign up</h4>
+            </div>
+        </div>
+        <div id='modalBox' class="flex center position-absolute top0 height-width100 bg-color-gray-op">
+            <!-- modal -->
+            <div id="signUpBox" class="flex fd-column center jc-space-between bg-color-white">
+                <!-- create account -->
+                <h1 class="member-login color-gray">Sign up</h1>
+
+                <div id="accInfo" class=" height-width100">
+                    <form id="signUpForm" class="flex jc-space-between fd-column">
+
+                        <input class='input radius flex center' type="text" id="signUpUsername" name="signUpUsername" value="username" class="input-style">
+
+                        <input class='input radius flex center' type="password" id="signUpPassword" name="signUpPassword" value="password" class="input-style">
+
+                    </form>
+                </div>
+                
+                    <div id="createAccBtn" class="flex center radius bg-color-orange">
+                        <h3 class="margin0">sign up</h3>
+                    </div>
+                
+                
             </div>
         </div>
     <script src="./js/login/login.js">

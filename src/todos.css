@@ -72,6 +72,32 @@ textarea:focus {
   height: 250px;
 }
 
+#todoNameTimeText {
+  width: 80%;
+}
+
+#todoNameTime {
+  width: 100%;
+}
+
+#todoText {
+  padding: 1.33em 0;
+}
+
+#deleteTodo {
+  width: 10%;
+  height: 10%;
+  visibility: hidden;
+}
+
+#trash-can {
+  width: 25%;
+}
+
+#trash-can-img {
+  width: 100%;
+}
+
 .bg-color-white {
   background-color: white;
 }
@@ -177,4 +203,8 @@ textarea:focus {
   border-color: gray;
   border-width: 3px;
   border-radius: 50%;
+}
+
+.padding5 {
+  padding: 0px 5.16% 0px 5.16%;
 }
