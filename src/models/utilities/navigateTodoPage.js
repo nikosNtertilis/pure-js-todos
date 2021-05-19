@@ -6,7 +6,7 @@ const navigateTodoPage = (user) => {
     user = users[indexOfUser];
     
     localStorage.setItem('user', JSON.stringify(user))
-    window.location = 'todos.html';
+    window.location = 'src/components/todos/todos.html';
 }
 
 export default navigateTodoPage;

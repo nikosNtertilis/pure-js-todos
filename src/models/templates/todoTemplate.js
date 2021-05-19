@@ -18,7 +18,7 @@ const todoTemplate = (elem, index) => `
     </div>
     <div id="deleteTodo" name="deleteTodo" class="flex center">
         <div id="trash-can" name="trashCan">
-            <img id="trash-can-img" src="${trashCanURL}" alt="trash can">
+            <img id="trash-can-img" src="../../images/trashCan.jpg" alt="trash can">
         </div>       
     </div>
 </div>`
