@@ -1,4 +1,4 @@
-import imageURL from 'url:../../../images/trashCan.jpg'
+import {trashCanURL} from '../../images'
 
 const todoTemplate = (elem, index) => `
 <div id="${elem.title + index}" name="todoItem" class="flex jc-space-between align-items-center padding5">
@@ -18,7 +18,7 @@ const todoTemplate = (elem, index) => `
     </div>
     <div id="deleteTodo" name="deleteTodo" class="flex center">
         <div id="trash-can" name="trashCan">
-            <img id="trash-can-img" src="${imageURL}" alt="trash can">
+            <img id="trash-can-img" src="${trashCanURL}" alt="trash can">
         </div>       
     </div>
 </div>`

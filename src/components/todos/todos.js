@@ -1,5 +1,11 @@
-import {completeTask, createTaskBtnOnClickHandler, deleteTaskBtnOnClickHandler, modalBackdrop, newTaskBtnOnClickHandler} from './onClickHandlers'
-import {todoTemplate} from './todoTemplate'
+import {
+    completeTask,
+    createTaskBtnOnClickHandler, 
+    deleteTaskBtnOnClickHandler, 
+    modalBackdrop, 
+    newTaskBtnOnClickHandler
+} from '../../models/onClickHandlers'
+import {todoTemplate} from '../../models/templates'
 
 const usernameTxt = document.getElementById("username-txt");
 const logoutBtn = document.getElementById("logoutBtn");

@@ -1,6 +1,4 @@
-import {findUsername} from '../../findUsername'
-import {authenticate} from '../../authenticate'
-import {navigateTodoPage} from '../../navigateTodoPage'
+import {findUsername, authenticate, navigateTodoPage} from '../utilities'
 
 const usernameInput = document.getElementById("username");
 const PasswordInput = document.getElementById("password");

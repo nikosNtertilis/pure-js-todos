@@ -1,5 +1,5 @@
-import {initLocalStorage} from './initLocalStorage'
-import {createAccBtnOnClickHandler, loginBtnOnClickHandler, modalBackdrop, signUpBtnOnClickHandler} from './onClickHandlers'
+import {initLocalStorage} from '../../models/utilities'
+import {createAccBtnOnClickHandler, loginBtnOnClickHandler, modalBackdrop, signUpBtnOnClickHandler} from '../../models/onClickHandlers'
 
 const usernameInput = document.getElementById("username");
 const PasswordInput = document.getElementById("password");

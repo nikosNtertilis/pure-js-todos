@@ -31,7 +31,8 @@ input:focus {
 #signUpBox {
   border-radius: 2% / 4%;
   width: 40%;
-  height: 25%;
+  height: auto;
+  min-height: 20%;
 }
 
 #createAccBtn {
@@ -41,7 +42,7 @@ input:focus {
 
 #signUpUsername,
 #signUpPassword {
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   padding: 2%;
   border: solid;
   border-radius: 2% / 25%;

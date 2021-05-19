@@ -1,5 +1,5 @@
-// import trashCan from './trash can.jpg'
+import trashCanURL from 'url:./trashCan.jpg'
 
-// export {
-//     trashCan,
-// }
+export {
+    trashCanURL,
+}

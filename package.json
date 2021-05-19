@@ -4,7 +4,7 @@
   "description": "Replace command for with forEach",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html src/todos.html"
+    "dev": "parcel src/components/login/index.html src/components/todos/todos.html"
   },
   "repository": {
     "type": "git",

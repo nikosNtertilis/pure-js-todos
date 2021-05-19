@@ -1,5 +1,4 @@
-import { findUsername } from "../../findUsername";
-import { navigateTodoPage } from "../../navigateTodoPage";
+import { findUsername, navigateTodoPage } from "../utilities";
 
 const signUpUsername = document.getElementById("signUpUsername");
 const signUpPassword = document.getElementById("signUpPassword");

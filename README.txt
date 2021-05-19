@@ -1,1 +1,2 @@
-Replace command for with forEach
+npm run dev
+
