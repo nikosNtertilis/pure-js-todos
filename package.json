@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/components/login/index.html src//components/todos/todos.html"
+    "dev": "parcel src/components/login/index.html src/components/todos/todos.html"
   },
   "repository": {
     "type": "git",

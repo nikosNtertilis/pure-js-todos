@@ -1,4 +1,4 @@
-import { findUsername, navigateTodoPage } from "../utilities";
+import { findUsername, navigateTodoPage, switchLoginSignUpFlag } from "../utilities";
 
 const createAccBtnOnClickHandler = (signUpUsername, signUpPassword) => {
 
@@ -14,7 +14,7 @@ const createAccBtnOnClickHandler = (signUpUsername, signUpPassword) => {
         if(!findUsername(users, user.username)){
             users.push( user );
             localStorage.setItem('users', JSON.stringify(users));
-            navigateTodoPage(user);
+            switchLoginSignUpFlag();
         }else{
             window.alert('this username exist');
         }

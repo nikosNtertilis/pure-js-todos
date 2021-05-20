@@ -1,4 +1,4 @@
-import {initLocalStorage} from '../../models/utilities'
+import {initLocalStorage, switchLoginSignUpFlag} from '../../models/utilities'
 import {createAccBtnOnClickHandler, loginBtnOnClickHandler, modalBackdrop, signUpBtnOnClickHandler} from '../../models/onClickHandlers'
 import { loginForm, signUpForm } from '../../models/templates';
 
@@ -13,9 +13,8 @@ const switchFormBtn = document.getElementById("switchFormBtn");
 initLocalStorage();
 
 switchFormBtn.onclick = () => {
-    flags.loginSignUpFlag = !flags.loginSignUpFlag;
-    localStorage.setItem('flags', JSON.stringify(flags));
-    window.location.reload();
+    switchLoginSignUpFlag();
+    
 };
 
 if(flags.loginSignUpFlag){
@@ -33,7 +32,7 @@ if(flags.loginSignUpFlag){
         PasswordInput.value = "";
     };
     
-    loginBtn.onclick = loginBtnOnClickHandler;
+    loginBtn.onclick = () => loginBtnOnClickHandler(usernameInput, PasswordInput);
 }else {
     const signUpUsername = document.getElementById("signUpUsername");
     const signUpPassword = document.getElementById("signUpPassword");

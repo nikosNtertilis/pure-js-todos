@@ -1,9 +1,6 @@
 import {findUsername, authenticate, navigateTodoPage} from '../utilities'
 
-const usernameInput = document.getElementById("username");
-const PasswordInput = document.getElementById("password");
-
-const loginBtnOnClickHandler = () => {
+const loginBtnOnClickHandler = (usernameInput, PasswordInput) => {
     
     if(!!usernameInput.value && !!PasswordInput.value){
         const user = {
