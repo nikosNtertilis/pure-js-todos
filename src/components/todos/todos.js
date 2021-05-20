@@ -1,7 +1,7 @@
 import {
     completeTask,
     createTaskBtnOnClickHandler, 
-    deleteTaskBtnOnClickHandler, 
+    deleteTodoBtnOnClickHandler, 
     modalBackdrop, 
     newTaskBtnOnClickHandler
 } from '../../models/onClickHandlers'
@@ -49,7 +49,7 @@ todoItem.forEach((currentValue, i, listObj) => {
     console.log(currentValue.children.deleteTodo.children);
 
     currentValue.children.todoNameTimeText.onclick =() => completeTask(i, user, users);
-    currentValue.children.deleteTodo.children.trashCan.onclick = () => deleteTaskBtnOnClickHandler(i, user, users);
+    currentValue.children.deleteTodo.children.trashCan.onclick = () => deleteTodoBtnOnClickHandler(i, user, users);
 
     if(user.todos[i].isChecked){
 
