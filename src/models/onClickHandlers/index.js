@@ -1,6 +1,6 @@
 import loginBtnOnClickHandler from './loginBtnOnClickHandler'
 import signUpBtnOnClickHandler from './signUpBtnOnClick'
-import createAccBtnOnClickHandler from './createTaskBtnOnClickHandler'
+import createAccBtnOnClickHandler from './createAccBtnOnClickHandler'
 import modalBackdrop from './modalBackdrop'
 import completeTask from './completeTask'
 import createTaskBtnOnClickHandler from './createTaskBtnOnClickHandler'

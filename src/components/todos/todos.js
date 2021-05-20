@@ -34,7 +34,7 @@ user.todos.forEach( (elem, index) => {
 logoutBtn.onclick = () => {
 
     localStorage.setItem('user','{}')
-    window.location = 'index.html'
+    window.location.replace('http://localhost:1234/login/index.html'); 
 
 }
 

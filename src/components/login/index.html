@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class='flex center login-form'>
-            <h1 class="member-login">Member login</h1>
+        <div id="main" class='flex center login-form'>
+            <h1 id="memberTitle" class="member-login">Member login</h1>
             <div class="flex center form-div fd-column">
                 <form class="flex form">
                     <div class='username  height20 radius bg-color-white'>
@@ -23,29 +23,6 @@
                     </div>
                   </form>
                   <h4 id="signUpBtn">sign up</h4>
-            </div>
-        </div>
-        <div id='modalBox' class="flex center position-absolute top0 height-width100 bg-color-gray-op">
-
-            <div id="signUpBox" class="flex fd-column center jc-space-between bg-color-white">
-
-                <h1 class="member-login color-gray">Sign up</h1>
-
-                <div id="accInfo" class=" height-width100">
-                    <form id="signUpForm" class="flex jc-space-between fd-column">
-
-                        <input class='input radius flex center' type="text" id="signUpUsername" name="signUpUsername" value="username" class="input-style">
-
-                        <input class='input radius flex center' type="password" id="signUpPassword" name="signUpPassword" value="password" class="input-style">
-
-                    </form>
-                </div>
-                
-                    <div id="createAccBtn" class="flex center radius bg-color-orange">
-                        <h3 class="margin0">sign up</h3>
-                    </div>
-                
-                
             </div>
         </div>
     <script src="./login.js">

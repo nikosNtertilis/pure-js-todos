@@ -1,9 +1,6 @@
 import { findUsername, navigateTodoPage } from "../utilities";
 
-const signUpUsername = document.getElementById("signUpUsername");
-const signUpPassword = document.getElementById("signUpPassword");
-
-const createAccBtnOnClickHandler = () => {
+const createAccBtnOnClickHandler = (signUpUsername, signUpPassword) => {
 
     if(!!signUpUsername.value && !!signUpPassword.value){
         const user = {
