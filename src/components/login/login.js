@@ -1,53 +1,37 @@
-import {initLocalStorage, switchLoginSignUpFlag} from '../../models/utilities'
-import {createAccBtnOnClickHandler, loginBtnOnClickHandler, modalBackdrop, signUpBtnOnClickHandler} from '../../models/onClickHandlers'
-import { loginForm, signUpForm } from '../../models/templates';
-
-const main = document.getElementById("main");
-
-let flags = JSON.parse(localStorage.getItem('flags'))
-
-main.innerHTML = flags.loginSignUpFlag ? loginForm : signUpForm;
-
-const switchFormBtn = document.getElementById("switchFormBtn");
+import {initLocalStorage, switchLoginMode} from '../../models/login/utilities'
+import {
+    createAccBtnOnClickHandler,
+    loginBtnOnClickHandler,
+    cleanInput,
+} from '../../models/login/onClickHandlers'
+import { application, loginForm, signUpForm } from '../../models/login';
+import {
+    main,
+    switchFormBtn,
+    usernameInput,
+    PasswordInput,
+    loginBtn,
+    signUpUsername,
+    signUpPassword,
+    signUpBtn,
+} from '../../models/login'
 
 initLocalStorage();
 
-switchFormBtn.onclick = () => {
-    switchLoginSignUpFlag();
-    
-};
+main.innerHTML = application.loginMode ? loginForm : signUpForm;
 
-if(flags.loginSignUpFlag){
-    const usernameInput = document.getElementById("username");
-    const PasswordInput = document.getElementById("password");
-    const loginBtn = document.getElementById("loginBtn");
+switchFormBtn.onclick = () => switchLoginMode();
 
-    usernameInput.onclick = () => {
-        if(usernameInput.value === 'Username')
-        usernameInput.value = '';
-    };
+if(application.loginMode){
+    usernameInput.onclick = () => cleanInput(usernameInput, 'Username');
 
-    PasswordInput.onclick = () => {
-        if(PasswordInput.value === 'Password')
-        PasswordInput.value = "";
-    };
-    
+    PasswordInput.onclick = () => cleanInput(PasswordInput, 'Password');
+
     loginBtn.onclick = () => loginBtnOnClickHandler(usernameInput, PasswordInput);
 }else {
-    const signUpUsername = document.getElementById("signUpUsername");
-    const signUpPassword = document.getElementById("signUpPassword");
-    const signUpBtn = document.getElementById("signUpBtn");
-
-    signUpUsername.onclick = () => {
-        if(signUpUsername.value === 'Username')
-        signUpUsername.value = '';
-    };
-
-
-    signUpPassword.onclick = () => {
-        if(signUpPassword.value === 'Password')
-        signUpPassword.value = "";
-    };
+    signUpUsername.onclick = () => cleanInput(signUpUsername, 'Username');
+    
+    signUpPassword.onclick = () => cleanInput(signUpPassword, 'Password');
 
     signUpBtn.onclick = () => createAccBtnOnClickHandler(signUpUsername, signUpPassword);
 }
