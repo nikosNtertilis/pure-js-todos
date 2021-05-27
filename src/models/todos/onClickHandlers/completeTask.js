@@ -1,8 +1,9 @@
-const todoCheckBox = document.getElementsByName("todoCheckBox");
-const todoText = document.getElementsByName("todoText");
-const todoName = document.getElementsByName("todoName");
-const deleteTodo = document.getElementsByName("deleteTodo");
-
+import {
+    todoCheckBox,
+    todoText    ,
+    todoName    ,
+    deleteTodo  ,
+} from '../elementsSelectors'
 const completeTask = (i, user, users) => {
 
     const usersUpdated = [...users];
@@ -11,11 +12,11 @@ const completeTask = (i, user, users) => {
 
     if(user.todos[i].isChecked){
 
-        todoCheckBox[i].style.background = 'white';
+        todoCheckBox()[i].style.background = 'white';
 
-        todoText[i].style.textDecoration = 'none';
-        todoName[i].style.textDecoration = 'none';
-        deleteTodo[i].style.visibility = 'hidden';
+        todoText()[i].style.textDecoration = 'none';
+        todoName()[i].style.textDecoration = 'none';
+        deleteTodo()[i].style.visibility = 'hidden';
 
         usersUpdated[indexOfUser].todos[i].isChecked = !userUpdated.todos[i].isChecked ;
         userUpdated.todos[i].isChecked = !userUpdated.todos[i].isChecked ;
@@ -24,11 +25,11 @@ const completeTask = (i, user, users) => {
         localStorage.setItem('users', JSON.stringify(usersUpdated));
     }else {
 
-        todoCheckBox[i].style.background = 'rgb(209, 164, 255)';
+        todoCheckBox()[i].style.background = 'rgb(209, 164, 255)';
 
-        todoText[i].style.textDecoration = 'line-through';
-        todoName[i].style.textDecoration = 'line-through';
-        deleteTodo[i].style.visibility = 'visible';
+        todoText()[i].style.textDecoration = 'line-through';
+        todoName()[i].style.textDecoration = 'line-through';
+        deleteTodo()[i].style.visibility = 'visible';
 
         usersUpdated[indexOfUser].todos[i].isChecked = !userUpdated.todos[i].isChecked ;
         userUpdated.todos[i].isChecked = !userUpdated.todos[i].isChecked ;

@@ -23,4 +23,6 @@ const todoTemplate = (elem, index) => `
     </div>
 </div>`
 
-export default todoTemplate;
+export {
+    todoTemplate,
+}

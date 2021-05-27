@@ -6,34 +6,34 @@ import {
 } from '../../models/login/onClickHandlers'
 import { application, loginForm, signUpForm } from '../../models/login';
 import {
-    main,
-    switchFormBtn,
-    usernameInput,
-    PasswordInput,
-    loginBtn,
-    signUpUsername,
-    signUpPassword,
-    signUpBtn,
+    main            ,
+    switchFormBtn   ,
+    usernameInput   ,
+    PasswordInput   ,
+    loginBtn        ,
+    signUpUsername  ,
+    signUpPassword  ,
+    signUpBtn       ,
 } from '../../models/login'
 
 initLocalStorage();
 
-main.innerHTML = application.loginMode ? loginForm : signUpForm;
+main().innerHTML = application.loginMode ? loginForm : signUpForm;
 
-switchFormBtn.onclick = () => switchLoginMode();
+switchFormBtn().onclick = () => switchLoginMode();
 
 if(application.loginMode){
-    usernameInput.onclick = () => cleanInput(usernameInput, 'Username');
+    usernameInput().onclick = () => cleanInput(usernameInput(), 'Username');
 
-    PasswordInput.onclick = () => cleanInput(PasswordInput, 'Password');
+    PasswordInput().onclick = () => cleanInput(PasswordInput(), 'Password');
 
-    loginBtn.onclick = () => loginBtnOnClickHandler(usernameInput, PasswordInput);
+    loginBtn().onclick = () => loginBtnOnClickHandler(usernameInput(), PasswordInput());
 }else {
-    signUpUsername.onclick = () => cleanInput(signUpUsername, 'Username');
+    signUpUsername().onclick = () => cleanInput(signUpUsername(), 'Username');
     
-    signUpPassword.onclick = () => cleanInput(signUpPassword, 'Password');
+    signUpPassword().onclick = () => cleanInput(signUpPassword(), 'Password');
 
-    signUpBtn.onclick = () => createAccBtnOnClickHandler(signUpUsername, signUpPassword);
+    signUpBtn().onclick = () => createAccBtnOnClickHandler(signUpUsername(), signUpPassword());
 }
 
 
